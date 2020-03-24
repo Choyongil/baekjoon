@@ -1,4 +1,5 @@
 # 1874번 스택을 이용한 수열
+# 답은 나오는데 왜 '출력초과'가 뜨는 경우
 
 n = int(input())
 
@@ -15,7 +16,6 @@ check = []
 
 for i in range(m):
     check.append(seq[i])
-
 
 if sorted(check) == check:
     while len(seq) != 0 and j != n+1:
