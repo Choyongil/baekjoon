@@ -1,7 +1,7 @@
 # baekjoon
 
 
-##solve step by step of baekjoon
+## solve step by step of baekjoon
 
 
  ~ 2020.03.24 : 25 files
