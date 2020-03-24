@@ -30,7 +30,7 @@ while len(results) != n:
     results.append(arr[i])
     # print('result :',results,'\n')
 
-print('<',end='')
-for i in range(len(results)-1):
-    print(results[i],end =', ')
-print(str(results[-1])+'>')
+# print('<',end='')
+# for i in range(len(results)-1):
+#     print(results[i],end =', ')
+# print(str(results[-1])+'>')
