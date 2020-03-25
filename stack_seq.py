@@ -1,38 +1,32 @@
 # 1874번 스택을 이용한 수열
-# 답은 나오는데 왜 '출력초과'가 뜨는 경우
+# 답은 나오는데 '출력초과'가 뜨는 경우
 
 n = int(input())
-
-seq = [int(input()) for _ in range(n)]
-seq.reverse()
-
-checks = []
+seq = []
 results = []
+i = 1
 
-j = 1
+while n > 0:
+    n -= 1
+    input_max = int(input())
 
-m = seq.index(max(seq))
-check = []
-
-for i in range(m):
-    check.append(seq[i])
-
-if sorted(check) == check:
-    while len(seq) != 0 and j != n+1:
-
-        checks.append(j)
+    if len(seq) == 0:
+        seq.append(i)
         results.append('+')
+        i += 1
 
-        while seq[-1] == checks[-1] and len(seq) != 0:
-            seq.pop()
-            checks.pop()
-            results.append('-')
-            if len(checks) == 0:
-                break
-        j += 1
+    while seq[len(seq) - 1] < input_max:
+        seq.append(i)
+        results.append('+')
+        i += 1
 
-    for result in results:
-        print(result)
+    if seq[len(seq) - 1] == input_max:
+        seq.pop()
+        results.append('-')
+    else:
+        results = []
+        results.append('NO')
+        break
 
-else:
-    print('NO')
+for result in results:
+    print(result)
